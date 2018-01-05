@@ -1,0 +1,66 @@
+---
+title: "Course2Project"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+load("tidy.RData")
+```
+
+Codebook
+
+This codebook was generated on 1/5/2018 to reflect detailed steps that generated the dataset entitled "tidy.txt". See run_analysis.r for actual code. 
+
+Variable list and descriptions:
+
+Variable Name                           Description
+
+Activity                                Action being measured
+Subject                                 ID of the subject who performed the activity
+*Acc                                    Feature: Acceleration signal (body or gravity)
+*Jerk                                   Feature: Jerk signal for body feature
+*Gyro                                   Measuring instrument
+*Mag                                    Magnitude of the signals
+*f/t/a                                  Domain: frequency, time or angle
+Variable                                Mean or std 
+*X/Y/Z                                  3 - axial signals
+
+Specific variable titles: 
+
+```{r }
+names(dt_tidy)
+```
+
+Data Structure:
+
+```{r structure}
+str(dt_tidy)
+```
+
+First 10 rows and last 5 rows of data set: 
+
+```{r}
+head(dt_tidy, n=10)
+tail(dt_tidy, n=5)
+```
+
+Dimensions: 
+
+```{r}
+dim(dt_tidy)
+```
+
+Class: 
+
+```{r}
+class(dt_tidy)
+```
+
+Summary: 
+
+```{r}
+summary(dt_tidy)
+```
+
